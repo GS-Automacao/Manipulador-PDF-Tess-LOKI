@@ -142,6 +142,16 @@ def processa_nfs(cidade: str, files: List[str] = []) -> int:
         cnpj: str = extract_text('cnpj.jpg', config='--psm 7 -c tessedit_char_whitelist=0123456789').strip()
 
         novo_nome = f'{nome} - {cnpj} NF.pdf'
+        mapeamento = {
+            '®': '',
+            '/': '',
+            '\\': '',
+            '|': '',
+            '”': '',
+            '<': '',
+            '=': ''
+        }
+        novo_nome = novo_nome.translate(str.maketrans(mapeamento))
         shutil.move(file, novo_nome)
     try:
         # Apaga as imagens residuais.
