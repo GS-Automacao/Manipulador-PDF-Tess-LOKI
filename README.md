@@ -1,29 +1,41 @@
-DOCUMENTAÇÃO - Manipulador de PDF - TESS
+# ***MANIPULADOR DE PDF TESS - LOKI***
 
-Pra que serve?
+## **VISÃO GERAL**
 
-I - O código serve para verificar de qual prefeitura a Nota Fiscal é.
+> A função principal do robô, não muito diferente do *Manipulador de PDF* normal, é que, ele serve apenas para os arquivos pdf
+> do tipo imagem, isso é, um leitor comum de pdf, não conseguiria ler o arquivo, ja que, ele é uma imagem, entretanto, o robô
+> realiza a mesma função, lê o arquivo e recorta e captura a área do arquivo onde tem o nome do **cliente** e o **numero da nota**,
+> para que posteriormente ele possa renomear o arquivo com essas informações.
 
-II - E extrair os textos que estão na imagem do PDF.
+## 1) **TELA DE ESCOLHA DO USUARIO**
 
-Prefeituras:
+> Ao executar o arquivo main.exe, o usuario tem a opção de escolher por meio do terminal de qual municipio pertence o arquivo que ele
+> quer renomear.
 
--> Curitiba;
 
--> Salvador;
+## 2) **RECORTE E CAPTURA DE ARQUIVO**
 
--> Sorocaba;
+> Após a escolha do muncicipio, o robô segue pro proximo passo, o *recorte* e *captura* dos locais onde o nome da empresa e o numero da nota
+> estão disponiveis no arquivo pdf do tipo imagem.
 
--> Vitória;
+## 3) **RENOMEAÇÃO DOS ARQUIVOS**
 
--> Vila Velha;
+> Após o recorte e a captura das informações disponiveis no texto dos arquivos, o robô armazena a resposta e renomeia o arquivo correspodente
+> com o nome da empresa e o numero da nota.
 
--> São Paulo;
 
-Como o código funciona? 
 
-1) Ao ser executado, o robô espera  escolher uma das opções listadas.
-   
-2) Após a escolha da opção, o robô pega o arquivo pdf em imagem no mesmo diretório do arquivo (main.py).
-   
-3) Por fim, ele transforma a imagem pdf em arquivo de texto em pdf e finaliza.
+
+
+
+
+
+
+
+
+
+
+
+
+
+# **EM PROGRESSO....**
